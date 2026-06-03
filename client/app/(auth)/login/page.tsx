@@ -67,6 +67,13 @@ export default function LoginPage() {
       }
 
       console.log("Success! Authenticated session:", result);
+      //store jwt in localhost
+      if (result.token) {
+        localStorage.setItem("token", result.token);
+        console.log("Jwt saved successfully");
+      } else {
+        console.warn("Backend did not send any token string");
+      }
 
       // Redirect straight over to your authenticated posts dashboard view
       router.push("/blogs");

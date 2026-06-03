@@ -107,13 +107,14 @@ export default function Navbar() {
                 })}
 
                 <hr className="border-zinc-900 my-2" />
-
-                <Button
-                  onClick={() => setIsOpen(false)}
-                  className="text-xl bg-emerald-500 text-black hover:bg-emerald-600 rounded-sm py-6 w-full cursor-pointer"
-                >
-                  Login
-                </Button>
+                <Link href="/login">
+                  <Button
+                    onClick={() => setIsOpen(false)}
+                    className="text-xl bg-emerald-500 text-black hover:bg-emerald-600 rounded-sm py-6 w-full cursor-pointer"
+                  >
+                    Login
+                  </Button>
+                </Link>
               </div>
             </SheetContent>
           </Sheet>
